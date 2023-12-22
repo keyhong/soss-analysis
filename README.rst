@@ -43,9 +43,17 @@ Installation
 
 Execution
 -----------
-| 프로그램을 실행시키기 위한 일별, 월별 프로그램을 실행시킬수 있는 airflow 스케줄링 파일 ($AIRFLOW_HOME/dags)이 만들어져 있습니다.
-| 따라서 스케줄링을 실행하고 airflow-webserver 에서 실행 확인 필요
-| airflow-webserver : http://172.19.100.217:8080/home
+| 1. 프로그램을 돌리기 위해서는 DW에 전처리된 데이터들이 적재되어 있어야 합니다.
+|
+| 2. 프로그램을 빌드 후, __main__.py 모듈의 단일 EntryPoint를 통해 실행합니다.
+| (실행 예시) $ python soss <Service> <EXECUTION_DATE>
+|             $ python soss safe-idex-preprocessing 20230101
+| (추가) 실행가능한 모듈 리스트와 넣을 수 있는 인자값은 help를 통해 알 수 있으며, 잘못된 형식의 인자를 넣으면 에러를 반환합니다.
+         $ python soss -h
+
+| 3. 프로그램을 실행시키기 위한 일별, 월별 프로그램을 실행시킬수 있는 Airflow 스케줄링 예시 DAG 파일이 "$AIRFLOW_HOME/dags"에 있습니다.
+| 따라서 스케줄링을 실행하고 airflow-webserver에서 실행 확인 필요합니다. 수정시 Airflow Executor에 따라 DAG 파일을 다르게 작성해주셔야 할 수도 있습니다.
+| airflow-webserver : http://127.0.0.1:8080/home
 
 Dependencies
 ------------
@@ -54,7 +62,7 @@ soss requires python :
 
 - Python (>= 3.6)
 
-**soss는 Python 3.6 버전 이상의 파이썬에서 동작하며, 현재 인천시 기준 설치버전은 Python 3.8.17 입니다.**
+**soss는 Python 3.6 버전 이상의 파이썬에서 동작하며, 현재 테스한 파이썬 설치버전은 Python 3.8.17 입니다.**
 
 soss requires packages:
 
@@ -72,6 +80,5 @@ soss requires packages:
 - tdqm
 - haversine
 
-**soss는 스케줄링 프로그램으로 airflow를 사용하고 있으며, airflow의 버전은 2.6.2 입니다.**
-
-**soss는 분산 처리 프레임워크는 pyspark를 사용하고 있으며, pyspark의 버전은 3.3.2 입니다.**
+| *soss는 스케줄링 프로그램은은 Airflow를 사용하고 있으며, 테스트 버전은 2.6.2 입니다.*
+| *soss는 분산 처리 프레임워크는 PySpark를 사용하고 있으며, 테스트 버전은 3.3.2 입니다.*
