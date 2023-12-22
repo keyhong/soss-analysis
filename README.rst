@@ -50,14 +50,23 @@ Execution
 | 1. 프로그램을 실행하기 위해서는 Postgres Data Warehouse에 전처리된 데이터들이 적재되어 있어야 합니다.
 |
 | 2. SOSS 패키지를 빌드 후, 모든 서비스의 실행은 __main__.py 모듈의 단일 EntryPoint를 통해 실행됩니다.
-
+|
 .. code-block:: bash
     
   $ usage: python soss [-h] [SERVICE] [EXECUTION_DATE]
 
   $ example: python soss safe-idex-operation 20230101
-| 
-| 3.  모듈의 단일 면 Airflow Webserver 에서 확인 가능합니다. *Airflow Webserver : http://127.0.0.1:8080/home*
+|
+| 실행에 대한 SERVICE 목록에 대한 참조는 help를 통해 확인 가능합니다.
+| ** EXECUTION_DATE 인자 값에 대한 포맷은 'yyyyMMd' 이며, 일치하지 않을 시 에러를 반환하게 되어있습니다.
+|
+
+.. code-block:: bash
+    
+  $ usage: python soss -h
+
+| 3. 미리 작성된 월별, 일별 DAG가 있어 bin/start-soss-airflow-web-scheduler.sh 쉘을 실행하면 배치 프로그램이 매일 수행됩니다. 
+| 프로그램 수행에 대한 결과는 Airflow Webserver 에서 확인 가능합니다. *Airflow Webserver : http://127.0.0.1:8080/home*
 
 Dependencies
 ------------
