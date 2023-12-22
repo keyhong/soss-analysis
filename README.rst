@@ -2,7 +2,7 @@
 
 What is SOSS?
 ---------------
-**SOSS** 은 `B2EN <https://www.b2en.com/>`_ 사 에서 만든 지역 안전 예측 프로그램 입니다.
+**SOSS** 은 지역 안전 예측 프로그램 입니다.
 
 
 SOSS Analysis Program
