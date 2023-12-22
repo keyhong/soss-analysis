@@ -1,0 +1,31 @@
+from soss.utils.config_parser import (
+    DM_SERVER,
+    DW_SERVER,
+    POSTGRES_PORT,
+    POSTGRES_USER,
+    POSTGRES_PASSWRD,
+    POSTGRES_DB,
+    MIN_X_CRD,
+    MIN_Y_CRD,
+    SPARK_MASTER,
+    SPARK_DRIVER_MEMORY,
+    SPARK_EXECUTOR_MEMORY,
+    SPARK_LOCAL_DIR,
+    SPARK_MAX_RESULT_SIZE    
+)
+
+__all__ = [
+    "DM_SERVER",
+    "DW_SERVER",
+    "POSTGRES_PORT",
+    "POSTGRES_USER",
+    "POSTGRES_PASSWRD",
+    "POSTGRES_DB",
+    "MIN_X_CRD",
+    "MIN_Y_CRD",
+    "SPARK_MASTER",
+    "SPARK_DRIVER_MEMORY",
+    "SPARK_EXECUTOR_MEMORY",
+    "SPARK_LOCAL_DIR",
+    "SPARK_MAX_RESULT_SIZE"      
+]
