@@ -4,12 +4,12 @@ What is SOSS?
 ---------------
 | **SOSS** 은 지역 안전 예측 프로그램 입니다.
 
-| 안전지수 분석, CCTV 효율지수 분석, 순찰거점 추천, (CCTV효율지수, 경찰신고접수) 통계 분석 서비스를 제공합니다.
+| 안전지수 분석, CCTV 효율지수 분석, 순찰거점 추천, [CCTV 효율지수, 경찰신고접수] 통계 분석 서비스를 제공합니다.
 
 SOSS Analysis Program
 -----------------------
 
-* safe-idex : 안전지수
+* safe-idex : 안전지수 분석
   
   - safe-idex-preprocessing : 안전지수 전처리
 
@@ -17,19 +17,22 @@ SOSS Analysis Program
 
   - safe-idex-operation : 안전지수 운영
 
-* cctv-optmz : CCTV 최적화
+|
+* cctv-optmz : CCTV 효율지수 분석
 
   - cctv-optmz-model-learning : CCTV 최적화 모델 학습
   
   - cctv-optmz-operation : CCTV 최적화 운영
 
-* ptr-pst-rcm : 순찰거점
+|
+* ptr-pst-rcm : 순찰거점 추천
 
   - ptr-pst-rcm : 순찰거점 운영
 
-* statistic : 통계 데이터 적재
+|
+* statistic : [CCTV 효율지수, 경찰신고접수] 통계 분석
 
-  - spark_insert_dm_npa_dcr_rcp : 경찰청 신고 통계 적재 
+  - spark_insert_dm_npa_dcr_rcp : 경찰 신고 통계 적재 
 
   - spark_insert_dm_gu_cctv_mntr_tm : CCTV 구별 시간 통계 적재
 
@@ -40,21 +43,13 @@ Installation
 
 .. code-block:: bash
     
-  cd /home/icitydatahub/soss && pip install -e . 
+  $ cd /home/icitydatahub/soss && pip install -e . 
 
 Execution
 -----------
-| 1. 프로그램을 돌리기 위해서는 DW에 전처리된 데이터들이 적재되어 있어야 합니다.
+| 1. 프로그램을 실행하기 위해서는 Postgres Data Warehouse에 전처리된 데이터들이 적재되어 있어야 합니다.
 |
-| 2. 프로그램을 빌드 후, __main__.py 모듈의 단일 EntryPoint를 통해 실행합니다.
-| (실행 예시) $ python soss <Service> <EXECUTION_DATE>
-|             $ python soss safe-idex-preprocessing 20230101
-| (추가) 실행가능한 모듈 리스트와 넣을 수 있는 인자값은 help를 통해 알 수 있으며, 잘못된 형식의 인자를 넣으면 에러를 반환합니다.
-         $ python soss -h
-
-| 3. 프로그램을 실행시키기 위한 일별, 월별 프로그램을 실행시킬수 있는 Airflow 스케줄링 예시 DAG 파일이 "$AIRFLOW_HOME/dags"에 있습니다.
-| 따라서 스케줄링을 실행하고 airflow-webserver에서 실행 확인 필요합니다. 수정시 Airflow Executor에 따라 DAG 파일을 다르게 작성해주셔야 할 수도 있습니다.
-| airflow-webserver : http://127.0.0.1:8080/home
+| 2. 프로그램을 빌드 후, __main__.py 모듈의 단일 면 Airflow Webserver 에서 확인 가능합니다. *Airflow Webserver : http://127.0.0.1:8080/home*
 
 Dependencies
 ------------
