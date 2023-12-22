@@ -512,8 +512,8 @@ def check_right_position(x_crd: float, y_crd: float, log_instance):
     """
 
     # 순찰거점좌표에 grid_id 부여하기
-    x_id = (Decimal(str(x_crd)) - Decimal(min_x_crd)) // Decimal("50")
-    y_id = (Decimal(str(y_crd)) - Decimal(min_y_crd)) // Decimal("50")
+    x_id = (Decimal(str(x_crd)) - Decimal(MIN_X_CRD)) // Decimal("50")
+    y_id = (Decimal(str(y_crd)) - Decimal(MIN_Y_CRD)) // Decimal("50")
 
     position = ','.join([str(x_id), str(y_id)])
 
