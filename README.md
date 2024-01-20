@@ -74,7 +74,7 @@ soss requires python :
 
 - Python (>= 3.6)
 
-**soss는 Python 3.6 버전 이상의 파이썬에서 동작하며, 현재 테스한 파이썬 설치버전은 Python 3.8.17 입니다.**
+**soss는 f-string 사용으로 인해 Python 3.6 버전 이상의 파이썬에서 동작하며, 현재 테스트한 파이썬 설치버전은 Python 3.8.17 입니다.**
 
 soss requires packages:
 
