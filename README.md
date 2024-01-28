@@ -1,15 +1,11 @@
 SOSS
 ======
 
-![Last updated](https://img.shields.io/visual-studio-marketplace/last-updated/innoverio.vscode-dbt-power-user)
-![Version](https://img.shields.io/visual-studio-marketplace/v/innoverio.vscode-dbt-power-user)
-![Build passing](https://github.com/innoverio/vscode-dbt-power-user/workflows/.github/workflows/ci.yml/badge.svg)
-
 # What is SOSS?
 
 **SOSS** 은 지역 안전 예측 프로그램 입니다.
 
-안전지수 분석, CCTV 효율지수 분석, 순찰거점 추천, [CCTV 효율지수, 경찰신고접수] 통계 분석 서비스를 제공합니다.
+안전지수 분석, CCTV 효율지수 분석, 순찰거점 추천, [CCTV 효율지수, 신고접수] 통계 분석 서비스를 제공합니다.
 
 # SOSS Analysis Program
 
@@ -78,22 +74,22 @@ soss requires python :
 
 soss requires packages:
 
-| Feature                                   | Details                                                                                       | Version                                                       |
-| ------------------------------------------| ----------------------------------------------------------------------------------------------|------------------------------------ | 
-| apache-airflow[postgres] | Auto-fill model names, macros, sources and docs. Click on model | 2.6.3
-| pyspark               | Generate dbt model / query results. Export as CSV or | 3.3.2 |
-| [py4j](https://www.py4j.org/)                     | Model lineage as well as column lineage                 | 0.10.9.5 |
-| numpy                    | from source files or convert SQL to dbt Model (docs) | 1.24.3 |
-| pandas                         | Generate model and column descriptions or write in the UI editor. Save forma | 1.4.1 |
-| geopandas                  | Just click to do common dbt operations like running tests, parent / child models or previewing data. | 0.13.2 |
-| scikit-learn         | Get live ) | 1.2.2 
-| xgboost                   | Identify issues in your dbt project like columns not present, models not materialized | 1.6.2 |
-| lightgbm                  | Identify issues in SQL like typos in keywords, missing or extra pa | 3.3.5 |
-| joblib                         | Estimate data that will be processed by dbt model in BigQuery | 1.2.0 |
-| python-dateutil         | dbt logs viewer (force tailing)    |
-| tdqm                    | dbt logs viewer (force tailing)    |
-| haversine               | dbt logs viewer (force tailing)    |
+| Feature                                   | Details                                                                                                                                            | Version  |
+| ------------------------------------------| ---------------------------------------------------------------------------------------------------------------------------------------------------|----------| 
+| apache-airflow[postgres] | an open-source platform for orchestrating complex workflows and data pipelines.                                                                                     | 2.6.3    |
+| pyspark                  | Python library for Apache Spark, an open-source distributed computing system.                                                                                       | 3.3.2    |
+| py4j                     | It enables Python programs running in a Python interpreter to dynamically access Java objects in a Java virtual machine (JVM).                                      | 0.10.9.5 |
+| numpy                    | a fundamental package for scientific computing in Python and is widely used in various fields such as machine learning, data analysis, signal processing, and more. | 1.24.3   |
+| pandas                   | an open-source data manipulation and analysis library for Python.                                                                                                   | 1.4.1    |
+| geopandas                | It extends the capabilities of the Pandas library to handle geospatial data.                                                                                        | 0.13.2   |
+| scikit-learn             | It provides simple and efficient tools for data analysis and modeling.                                                                                              | 1.2.2    |
+| xgboost                  | It provides an efficient and scalable implementation of the gradient boosting framework.                                                                            | 1.6.2    |
+| lightgbm                 | distributed, high-performance gradient boosting framework that is designed for efficient training and prediction of large-scale datasets.                           | 3.3.5    |
+| joblib                   | It provides tools for performing parallel computing and efficiently distributing computational tasks across multiple processors or even different machines.         | 1.2.0    |
+| python-dateutil          | It provides extensions to the standard datetime module.                                                                                                             |          |
+| tdqm                     | It provides a simple and customizable way to display progress bars for tasks that may take some time to complete, making it easier for users to track the progress of an operation. | |
+| haversine                | It provides a simple interface for calculating distances between two points on the Earth using the haversine formula.                                                               | |
 
 
-| *soss는 스케줄링 프로그램은은 Airflow를 사용하고 있으며, 테스트 버전은 2.6.2 입니다.*
-| *soss는 분산 처리 프레임워크는 PySpark를 사용하고 있으며, 테스트 버전은 3.3.2 입니다.*
+- soss는 스케줄링 프로그램은은 Airflow를 사용하고 있으며, 테스트 버전은 2.6.2 입니다.*
+- soss는 분산 처리 프레임워크는 PySpark를 사용하고 있으며, 테스트 버전은 3.3.2 입니다.*
